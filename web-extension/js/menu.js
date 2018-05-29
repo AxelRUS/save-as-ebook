@@ -116,10 +116,10 @@ document.getElementById("editStyles").onclick = function() {
         active: true
     }, function(tab) {
 
-        chrome.tabs.insertCSS(tab[0].id, {file: '/cssEditor.css'});
+        chrome.tabs.insertCSS(tab[0].id, {file: '/css/cssEditor.css'});
 
         chrome.tabs.executeScript(tab[0].id, {
-            file: '/cssEditor.js'
+            file: '/js/cssEditor.js'
         });
 
          window.close();
@@ -137,11 +137,11 @@ document.getElementById("editChapters").onclick = function() {
         active: true
     }, function(tab) {
 
-        chrome.tabs.executeScript(tab[0].id, {file: '/jquery-sortable.js'});
-        chrome.tabs.insertCSS(tab[0].id, {file: '/chapterEditor.css'});
+        chrome.tabs.executeScript(tab[0].id, {file: '/lib/jquery-sortable.js'});
+        chrome.tabs.insertCSS(tab[0].id, {file: '/css/chapterEditor.css'});
 
         chrome.tabs.executeScript(tab[0].id, {
-            file: '/chapterEditor.js'
+            file: '/js/chapterEditor.js'
         });
 
          window.close();

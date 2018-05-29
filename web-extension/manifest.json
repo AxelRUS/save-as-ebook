@@ -11,17 +11,27 @@
     },
     "content_scripts": [{
         "matches": ["<all_urls>"],
-        "js": ["jquery.js", "jszip.js", "jszip-utils.js", "pure-parser.js", "cssjson.js", "filesaver.js", "saveEbook.js", "extractHtml.js", "utils.js"]
+        "js": [
+            "lib/jquery.js",
+            "lib/jszip.js",
+            "lib/jszip-utils.js",
+            "lib/pure-parser.js",
+            "lib/cssjson.js",
+            "lib/filesaver.js",
+            "js/saveEbook.js",
+            "js/extractHtml.js",
+            "js/utils.js"
+        ]
     }],
     "background": {
-        "scripts": ["background.js"],
+        "scripts": ["js/background.js"],
         "persistent": false
     },
     "browser_action": {
         "default_icon": "icons/book32.png",
         "default_title": "Save as eBook",
         "default_popup": "menu.html"
-     },
+    },
     "permissions": [
         "contextMenus",
         "activeTab",
@@ -37,25 +47,25 @@
     "commands": {
         "save-page": {
             "suggested_key": {
-              "default": "Alt+Shift+1"
+                "default": "Alt+Shift+1"
             },
             "description": "Save current page as eBook"
         },
         "save-selection": {
             "suggested_key": {
-              "default": "Alt+Shift+2"
+                "default": "Alt+Shift+2"
             },
             "description": "Save current selection as eBook"
         },
         "add-page": {
             "suggested_key": {
-              "default": "Alt+Shift+3"
+                "default": "Alt+Shift+3"
             },
             "description": "Add current page as chapter"
         },
         "add-selection": {
             "suggested_key": {
-              "default": "Alt+Shift+4"
+                "default": "Alt+Shift+4"
             },
             "description": "Add current selection as chapter"
         }
