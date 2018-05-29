@@ -18,6 +18,7 @@
             "lib/pure-parser.js",
             "lib/cssjson.js",
             "lib/filesaver.js",
+            "lib/chrome-extension-async.js",
             "js/saveEbook.js",
             "js/extractHtml.js",
             "js/utils.js"
